@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Building application..."
+      - python3 -m py_compile app.py
+artifacts:
+  files:
+    - '**/*'
